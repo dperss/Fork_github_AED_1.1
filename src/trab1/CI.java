@@ -31,6 +31,9 @@ public class CI {
     public boolean associarMembroAProjeto(int idProj){
         
     }
+    public boolean distribuirVerbaPorMIntegrado(int idProj){
+        
+    }
     public String membrosToString(){
         
     }

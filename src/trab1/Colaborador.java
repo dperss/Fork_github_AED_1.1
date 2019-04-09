@@ -15,10 +15,8 @@ public class Colaborador extends Membro{
         super(i,n);
     }
     
-    public boolean adicionarAoSaldo(double val){
-      
-        
-        return false;//temporario
+    public boolean adicionarAoSaldo(double val){    
+        return false;
     }
     
     @Override
