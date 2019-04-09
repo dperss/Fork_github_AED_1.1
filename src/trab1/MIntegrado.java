@@ -16,8 +16,10 @@ public class MIntegrado extends Membro{
         super(i,n);
     }
     public boolean adicionarAoSaldo(double val){
-        return false; // TEMPORARIO
+        return true; // TEMPORARIO
     }
+    
+    @Override
     public String toString(){
         return "Id do MIntegrado:" + id + "\n Nome:" + super.toString()+"";
     }
