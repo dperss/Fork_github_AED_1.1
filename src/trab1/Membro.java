@@ -24,9 +24,10 @@ public abstract class Membro {
     public boolean associarProjeto(Projeto p){
         return projetos.add(p);
     }
-    public boolean addicionarAoSaldo(double val){ // ABSTRACT
-        return false; //TEMPORARIO
-    }
+    public abstract boolean addicionarAoSaldo(double val);
+    
+    
+    @Override
     public String toString(){
         return nome;
     }
