@@ -20,7 +20,7 @@ public class CI {
         membros = new TreeMap<>();
     }
     public void addProjeto(int id,double fin){
-        
+        projetos.put(id, new Projeto(id,fin));
     }
     public boolean addMIntegrado(int id,String nome){
         if(!membros.containsKey(id))
@@ -48,3 +48,4 @@ public class CI {
         return membros.values().toString();
     }
 }
+
