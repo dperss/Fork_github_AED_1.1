@@ -15,10 +15,19 @@ public class MIntegrado extends Membro{
     public MIntegrado(int i,String n){
         super(i,n);
     }
+    
     public boolean adicionarAoSaldo(double val){
-        
+        if(saldo<0){
+            return false;
+        }else{
+        saldo=val;
+        return true;
+        }
     }
-    public String toString(){
-        
+    
+    @Override
+    public String toString(){  
+        return "o id do Membro Integrado é:"+id+"\n E o seu nome é:"+super.toString()+"\nE tem em saldo:"+saldo;
     }
+
 }

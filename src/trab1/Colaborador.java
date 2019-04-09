@@ -10,13 +10,19 @@ package trab1;
  * @author João Coelho nº39961 EI - Diogo Ramos n~39954 EI
  */
 public class Colaborador extends Membro{
+    
     public Colaborador(int i,String n){
         super(i,n);
     }
+    
     public boolean adicionarAoSaldo(double val){
+      
         
+        return false;//temporario
     }
-    public String toString(){
-        
+    
+    @Override
+    public String toString(){  
+        return "o id do Colaborador é:"+id+"\n E o seu nome é:"+super.toString()+"";
     }
 }
