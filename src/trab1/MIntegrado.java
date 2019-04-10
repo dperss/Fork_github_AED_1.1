@@ -15,12 +15,17 @@ public class MIntegrado extends Membro{
     public MIntegrado(int i,String n){
         super(i,n);
     }
-    public boolean adicionarAoSaldo(double val){
-        return true; // TEMPORARIO
+    
+    @Override
+    public boolean addicionarAoSaldo(double val) {
+        saldo+=val;
+        return true;
     }
     
     @Override
     public String toString(){
-        return "Id do MIntegrado:" + id + "\n Nome:" + super.toString()+"";
+        return "Id do MIntegrado:" + id + "\nNome:" + super.toString()+""+"\nRecebo:"+saldo+"\n";
     }
+
+
 }

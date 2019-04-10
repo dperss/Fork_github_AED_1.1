@@ -13,7 +13,7 @@ import java.util.LinkedHashSet;
  */
 public abstract class Membro {
     protected int id;
-    private final String nome;
+    private String nome;
     private LinkedHashSet<Projeto> projetos;
     
     public Membro(int i,String n){
@@ -21,11 +21,12 @@ public abstract class Membro {
         nome=n;
         projetos=new LinkedHashSet<>();
     }
-    public boolean associarProjeto(Projeto p){
-        return projetos.add(p);
-    }
-    public abstract boolean addicionarAoSaldo(double val);
     
+    public boolean associarProjeto(Projeto p){
+        return p.associarMembro(this);
+    }
+    
+    public abstract boolean addicionarAoSaldo(double val);
     
     @Override
     public String toString(){

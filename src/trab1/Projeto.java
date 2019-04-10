@@ -21,10 +21,24 @@ public class Projeto {
         financiamento=fin;
         membros=new LinkedHashSet<>();
     }
-    public boolean associarMembro(Membro m){
-        return membros.add(m);
+    
+    public boolean associarMembro(Membro m){         
+        return membros.add(m) && m.associarProjeto(this);
     }
+    
     public void distribuirVerbaPorMIntegrado(){
-        //
+        int num=0;
+        
+        for(Membro m : membros){
+            System.out.println("teste");
+           if( m instanceof MIntegrado){
+               num++;
+           }
+        }
+        double valor=financiamento/num;
+        for(Membro m : membros){
+           m.addicionarAoSaldo(financiamento);
+        }
+        
     }
 }

@@ -5,6 +5,8 @@
  */
 package principal;
 
+import static java.sql.DriverManager.println;
+import java.util.Scanner;
 import trab1.CI;
 
 /**
@@ -20,53 +22,77 @@ public class principal {
         CI teste = new CI();
         Scanner myObj = new Scanner(System.in);
         
-        println("--Bem-vindo ao seu Centro de Investigação--");
-        println("Menu");
-        println("0-Sair");
-        println("1-Adicione um projeto");
-        println("2-Adicione um Membro Integrado");
-        println("3-Adicione um Colaborador");
-        println("4-Associa um Membro a um projeto");
-        println("5-Distribua a verba pelos Membros Integrados");
-        println("6-Listar todos os Membros");
+        
+        
+        teste.addColaborador(0,"Diogo");
+        teste.addMIntegrado(1,"Ramos");
+        teste.addMIntegrado(2,"Bia");
+        teste.addColaborador(3,"Serra");
+        teste.addProjeto(0,100);
+        teste.associarMembroAProjeto(0, 1);
+        teste.associarMembroAProjeto(0, 2);
+        teste.associarMembroAProjeto(0, 3);
+        teste.distribuirVerbaPorMIntegrados(0);
+        System.out.println(teste.membrosToString());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*System.out.println("--Bem-vindo ao seu Centro de Investigação--");
+        System.out.println("Menu");
+        System.out.println("0-Sair");
+        System.out.println("1-Adicione um projeto");
+        System.out.println("2-Adicione um Membro Integrado");
+        System.out.println("3-Adicione um Colaborador");
+        System.out.println("4-Associa um Membro a um projeto");
+        System.out.println("5-Distribua a verba pelos Membros Integrados");
+        System.out.println("6-Listar todos os Membros");
         
         int var = myObj.nextInt();
+        
         switch(var) {
         case 0:
             System.exit(1);
         break;
          case 1:
-             println("Escreva o id do Projeto");
+             System.out.println("Escreva o id do Projeto");
              int var1=myObj.nextInt();
-             println("Escreva a verba do Projeto");
+             System.out.println("Escreva a verba do Projeto");
              int var2=myObj.nextInt();
              teste.addProjeto(var1, var2);
         break;
         case 2:
-             println("Escreva o id do Membro Integrado");
+             System.out.println("Escreva o id do Membro Integrado");
              var1=myObj.nextInt();
-             println("Escreva o Nome do Membro Integrado");
+             System.out.println("Escreva o Nome do Membro Integrado");
              String nome=myObj.next();
-            teste.addMIntegrado(var1,nome);
+             teste.addMIntegrado(var1,nome);
         break;
         case 3:
-             println("Escreva o id do Colaborador");
+             System.out.println("Escreva o id do Colaborador");
              var1=myObj.nextInt();
-             println("Escreva o nome do Colaborador");
+             System.out.println("Escreva o nome do Colaborador");
              var2=myObj.nextInt();
             teste.addProjeto(var1, var2);
         break;
         case 4:
-            println("Escreva o id do Membro");
+            System.out.println("Escreva o id do Membro");
             var1=myObj.nextInt();
-            println("Escreva o id do Projeto");
-            var1=myObj.nextInt();
-            teste.associarMembroAProjeto(var1);
+            System.out.println("Escreva o id do Projeto");
+        int var3 = myObj.nextInt();
+            teste.associarMembroAProjeto(var1,var3);
         break;
         case 5:
-            println("Escreva o id do Projeto");
+            System.out.println("Escreva o id do Projeto");
             var1=myObj.nextInt();
-            teste.distribuirVerbaPorMIntegrado(var1);
+            teste.distribuirVerbaPorMIntegrados(var1);
         case 6:
             teste.membrosToString();
         break;
@@ -74,5 +100,8 @@ public class principal {
            // code block
 
     }
-    
+    */
+        
+}
+
 }

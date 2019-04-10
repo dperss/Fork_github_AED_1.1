@@ -19,33 +19,66 @@ public class CI {
         projetos = new TreeMap<>();
         membros = new TreeMap<>();
     }
+    
     public void addProjeto(int id,double fin){
+        if(projetos.containsKey(id));
+                
+        else{
         projetos.put(id, new Projeto(id,fin));
+            
+        }
     }
+    
     public boolean addMIntegrado(int id,String nome){
-        if(!membros.containsKey(id))
+        if(membros.containsKey(id)==true)
                 return false;
         else{
             membros.put(id, new MIntegrado(id,nome));
             return true;
         }
     }
+    
     public boolean addColaborador(int id,String nome){
-        if(!membros.containsKey(id))
+        if(membros.containsKey(id)==true)
                 return false;
         else{
             membros.put(id, new Colaborador(id,nome));
             return true;
         }
     }
+    
     public boolean associarMembroAProjeto(int idMemb, int idProj){
-        return false; //TEMPORARIO
+        Membro m=membros.get(idMemb);
+        if(m==null){ 
+            return false;}
+         else{
+            Projeto p=projetos.get(idProj);
+            if(p==null){
+                return false;}
+            else{ 
+                return m.associarProjeto(p) && p.associarMembro(m);
+            }
+        } 
     }
+    
     public boolean distribuirVerbaPorMIntegrados(int idProj){
-        return false; // TEMPORARIO
+        Projeto p=projetos.get(idProj);
+       
+        if(p==null){
+            return false;
+        }
+         else{
+            p.distribuirVerbaPorMIntegrado();
+            return true;
+        } 
     }
+    
+    
     public String membrosToString(){
+        
+        
         return membros.values().toString();
+        
     }
 }
 
