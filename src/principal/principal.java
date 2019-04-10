@@ -29,9 +29,10 @@ public class principal {
         teste.addMIntegrado(2,"Bia");
         teste.addColaborador(3,"Serra");
         teste.addProjeto(0,100);
-        teste.associarMembroAProjeto(0, 1);
-        teste.associarMembroAProjeto(0, 2);
-        teste.associarMembroAProjeto(0, 3);
+        
+        teste.associarMembroAProjeto(1, 0);
+        teste.associarMembroAProjeto(2, 0);
+        teste.associarMembroAProjeto(3, 3);
         teste.distribuirVerbaPorMIntegrados(0);
         System.out.println(teste.membrosToString());
         
