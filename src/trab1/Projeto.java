@@ -7,9 +7,9 @@ package trab1;
 
 import java.util.LinkedHashSet;
 
-/**
- *
- * @author João Coelho nº39961 EI - Diogo Ramos nº39954 EI
+/*
+ * @author João Coelho nº39961 EI
+ * @author Diogo Ramos nº39954 EI
  */
 public class Projeto {
     private int id;
@@ -17,7 +17,7 @@ public class Projeto {
     private LinkedHashSet<Membro> membros;
     
     /**
-     *
+     *  Construtor por defeito.
      * @param i
      * @param fin
      */

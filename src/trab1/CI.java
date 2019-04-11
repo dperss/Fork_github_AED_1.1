@@ -7,16 +7,18 @@ package trab1;
 
 import java.util.TreeMap;
 
-/**
- *
- * @author João Coelho nº39961 EI - Diogo Ramos nº39954 EI
+/*
+ * @author João Coelho nº39961 EI
+ * @author Diogo Ramos nº39954 EI
  */
 public class CI {
     private TreeMap<Integer,Projeto> projetos;
     private TreeMap<Integer,Membro> membros;
     
     /**
-     *
+     *Construtor por defeito.
+     *Esta classe serve para criar Centros de investigação.
+     *Cria dois dicionarios um para os projetos e outro para os membros.
      */
     public CI(){
         projetos = new TreeMap<>();
@@ -24,9 +26,9 @@ public class CI {
     }
     
     /**
-     *
-     * @param id
-     * @param fin
+     *  Esta classe serve para adicionar projeto aos dicionario.
+     * @param id a chave adcionar
+     * @param fin o finaciamento do projeto
      */
     public void addProjeto(int id,double fin){
         if(projetos.containsKey(id));
@@ -38,10 +40,10 @@ public class CI {
     }
     
     /**
-     *
-     * @param id
-     * @param nome
-     * @return
+     *  Esta classe serve para adicionar um Membro Integrado ao dicionario.
+     * @param id a adicionar.
+     * @param nome do Membro Integrado.
+     * @return true - se for bem inserido ||return false se não for bem sucedido.
      */
     public boolean addMIntegrado(int id,String nome){
         if(membros.containsKey(id)==true)
@@ -53,9 +55,9 @@ public class CI {
     }
     
     /**
-     *
-     * @param id
-     * @param nome
+     *  Esta classe serve para adicionar um Colaborador ao dicionario.
+     * @param id a adcionar.
+     * @param nome do Colaborador.
      * @return
      */
     public boolean addColaborador(int id,String nome){
@@ -68,9 +70,9 @@ public class CI {
     }
     
     /**
-     *
-     * @param idMemb
-     * @param idProj
+     *  Esta classe serve para associar um membro a um projetos.
+     * @param idMemb a chave do membro.
+     * @param idProj a chave do projeto.
      * @return
      */
     public boolean associarMembroAProjeto(int idMemb, int idProj){
@@ -93,8 +95,8 @@ public class CI {
     }
     
     /**
-     *
-     * @param idProj
+     *  Este classe serve para chamar uma função na classe projeto que vai ditribuir a verba igualmente peols Membros Integrados.
+     * @param idProj a chave do projeto.
      * @return
      */
     public boolean distribuirVerbaPorMIntegrados(int idProj){
@@ -110,7 +112,8 @@ public class CI {
     }
     
     /**
-     *
+     *  Esta classe serva para chamar um classe existente nos membros que imprime todo o conteudo amarzenado no dicionario.
+     * 
      * @return
      */
     public String membrosToString(){

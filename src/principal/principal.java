@@ -9,9 +9,9 @@ import static java.sql.DriverManager.println;
 import java.util.Scanner;
 import trab1.CI;
 
-/**
- *
- * @author João Coelho nº39961 EI - Diogo Ramos nº39954 EI
+/*
+ * @author João Coelho nº39961 EI
+ * @author Diogo Ramos nº39954 EI
  */
 public class principal {
 

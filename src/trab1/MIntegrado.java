@@ -5,9 +5,9 @@
  */
 package trab1;
 
-/**
- *
- * @author João Coelho nº39961 EI - Diogo Ramos nº39954 EI
+/*
+ * @author João Coelho nº39961 EI
+ * @author Diogo Ramos nº39954 EI
  */
 public class MIntegrado extends Membro{
     private double saldo;
