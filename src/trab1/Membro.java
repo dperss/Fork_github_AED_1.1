@@ -16,16 +16,32 @@ public abstract class Membro {
     private String nome;
     private LinkedHashSet<Projeto> projetos;
     
+    /**
+     *
+     * @param i
+     * @param n
+     */
     public Membro(int i,String n){
         id=i;
         nome=n;
         projetos=new LinkedHashSet<>();
     }
     
+    /**
+     *
+     * @param p
+     * @return
+     */
     public boolean associarProjeto(Projeto p){
+        //return projetos.add(p);
         return p.associarMembro(this);
     }
     
+    /**
+     *
+     * @param val
+     * @return
+     */
     public abstract boolean addicionarAoSaldo(double val);
     
     @Override

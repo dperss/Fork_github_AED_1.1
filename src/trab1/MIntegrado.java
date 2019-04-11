@@ -12,10 +12,20 @@ package trab1;
 public class MIntegrado extends Membro{
     private double saldo;
     
+    /**
+     *
+     * @param i
+     * @param n
+     */
     public MIntegrado(int i,String n){
         super(i,n);
     }
     
+    /**
+     *
+     * @param val
+     * @return
+     */
     @Override
     public boolean addicionarAoSaldo(double val) {
         saldo+=val;

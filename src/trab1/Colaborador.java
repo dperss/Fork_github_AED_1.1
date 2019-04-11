@@ -11,10 +11,20 @@ package trab1;
  */
 public class Colaborador extends Membro{
     
+    /**
+     *
+     * @param i
+     * @param n
+     */
     public Colaborador(int i,String n){
         super(i,n);
     }
     
+    /**
+     *
+     * @param val
+     * @return
+     */
     @Override
     public boolean addicionarAoSaldo(double val) {
         return false;

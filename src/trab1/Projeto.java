@@ -16,16 +16,29 @@ public class Projeto {
     private double financiamento;
     private LinkedHashSet<Membro> membros;
     
+    /**
+     *
+     * @param i
+     * @param fin
+     */
     public Projeto(int i, double fin){
         id=i;
         financiamento=fin;
         membros=new LinkedHashSet<>();
     }
     
+    /**
+     *
+     * @param m
+     * @return
+     */
     public boolean associarMembro(Membro m){         
         return membros.add(m) && m.associarProjeto(this);
     }
     
+    /**
+     *
+     */
     public void distribuirVerbaPorMIntegrado(){
         int num=0;
         

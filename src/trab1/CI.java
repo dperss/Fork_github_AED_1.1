@@ -15,11 +15,19 @@ public class CI {
     private TreeMap<Integer,Projeto> projetos;
     private TreeMap<Integer,Membro> membros;
     
+    /**
+     *
+     */
     public CI(){
         projetos = new TreeMap<>();
         membros = new TreeMap<>();
     }
     
+    /**
+     *
+     * @param id
+     * @param fin
+     */
     public void addProjeto(int id,double fin){
         if(projetos.containsKey(id));
                 
@@ -29,6 +37,12 @@ public class CI {
         }
     }
     
+    /**
+     *
+     * @param id
+     * @param nome
+     * @return
+     */
     public boolean addMIntegrado(int id,String nome){
         if(membros.containsKey(id)==true)
                 return false;
@@ -38,6 +52,12 @@ public class CI {
         }
     }
     
+    /**
+     *
+     * @param id
+     * @param nome
+     * @return
+     */
     public boolean addColaborador(int id,String nome){
         if(membros.containsKey(id)==true)
                 return false;
@@ -47,20 +67,36 @@ public class CI {
         }
     }
     
+    /**
+     *
+     * @param idMemb
+     * @param idProj
+     * @return
+     */
     public boolean associarMembroAProjeto(int idMemb, int idProj){
         Membro m=membros.get(idMemb);
-        if(m==null){ 
-            return false;}
-         else{
+        if(m==null){
+            System.out.println("Membro não existe.");
+            return false;
+        }
+        else{
             Projeto p=projetos.get(idProj);
             if(p==null){
-                return false;}
-            else{ 
-                return m.associarProjeto(p) && p.associarMembro(m);
+                System.out.println("Projeto não existe.");
+                return false;
+            }
+            else{
+                System.out.println("Membro adicionado a Projeto.");
+                return p.associarMembro(m) && m.associarProjeto(p);
             }
         } 
     }
     
+    /**
+     *
+     * @param idProj
+     * @return
+     */
     public boolean distribuirVerbaPorMIntegrados(int idProj){
         Projeto p=projetos.get(idProj);
        
@@ -73,7 +109,10 @@ public class CI {
         } 
     }
     
-    
+    /**
+     *
+     * @return
+     */
     public String membrosToString(){
         
         
