@@ -32,25 +32,29 @@ public class Projeto {
      * @param m
      * @return
      */
-    public boolean associarMembro(Membro m){         
-        return membros.add(m) && m.associarProjeto(this);
+    public boolean associarMembro(Membro m){   
+        if(m==null){
+            return false;
+        }else{
+        membros.add(m);
+        return true;
+        }
     }
     
     /**
      *
      */
     public void distribuirVerbaPorMIntegrado(){
-        int num=0;
+        double num=0;
         
         for(Membro m : membros){
-            System.out.println("teste");
            if( m instanceof MIntegrado){
                num++;
            }
         }
         double valor=financiamento/num;
         for(Membro m : membros){
-           m.addicionarAoSaldo(financiamento);
+           m.addicionarAoSaldo(valor);
         }
         
     }

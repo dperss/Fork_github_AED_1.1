@@ -31,12 +31,7 @@ public class CI {
      * @param fin o finaciamento do projeto
      */
     public void addProjeto(int id,double fin){
-        if(projetos.containsKey(id));
-                
-        else{
         projetos.put(id, new Projeto(id,fin));
-            
-        }
     }
     
     /**

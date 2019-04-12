@@ -28,13 +28,17 @@ public class MIntegrado extends Membro{
      */
     @Override
     public boolean addicionarAoSaldo(double val) {
+        if(val==0){
+            return false;
+        }else{    
         saldo+=val;
         return true;
+        }
     }
     
     @Override
     public String toString(){
-        return "Id do MIntegrado:" + id + "\nNome:" + super.toString()+""+"\nRecebo:"+saldo+"\n";
+        return "Id do MIntegrado:" + id + "\nNome:" + super.toString()+"\nRecebo:"+saldo+"\n";
     }
 
 

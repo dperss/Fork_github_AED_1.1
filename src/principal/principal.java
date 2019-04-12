@@ -27,13 +27,17 @@ public class principal {
         teste.addColaborador(0,"Diogo");
         teste.addMIntegrado(1,"Ramos");
         teste.addMIntegrado(2,"Bia");
-        teste.addColaborador(3,"Serra");
+        teste.addMIntegrado(3,"Serra");
+        
         teste.addProjeto(0,100);
+        teste.addProjeto(1,500);
         
         teste.associarMembroAProjeto(1, 0);
         teste.associarMembroAProjeto(2, 0);
-        teste.associarMembroAProjeto(3, 3);
+        teste.associarMembroAProjeto(2, 1);
+        teste.associarMembroAProjeto(3, 1);
         teste.distribuirVerbaPorMIntegrados(0);
+        teste.distribuirVerbaPorMIntegrados(1);
         System.out.println(teste.membrosToString());
         
         
@@ -43,10 +47,10 @@ public class principal {
         
         
         
-        
-        
-        
-        /*System.out.println("--Bem-vindo ao seu Centro de Investigação--");
+        /*
+        int var=10;
+        while(var!=0){
+        System.out.println("--Bem-vindo ao seu Centro de Investigação--");
         System.out.println("Menu");
         System.out.println("0-Sair");
         System.out.println("1-Adicione um projeto");
@@ -56,7 +60,7 @@ public class principal {
         System.out.println("5-Distribua a verba pelos Membros Integrados");
         System.out.println("6-Listar todos os Membros");
         
-        int var = myObj.nextInt();
+        var = myObj.nextInt();
         
         switch(var) {
         case 0:
@@ -101,6 +105,7 @@ public class principal {
            // code block
 
     }
+        }
     */
         
 }

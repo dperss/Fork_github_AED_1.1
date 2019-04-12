@@ -33,6 +33,6 @@ public class Colaborador extends Membro{
     
     @Override
     public String toString(){
-        return "Id do Colaborador:" + id + "\nNome:" + super.toString()+""+"\n";
+        return "Id do Colaborador:" + id + "\nNome:" + super.toString()+"\n";
     }
 }

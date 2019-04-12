@@ -33,8 +33,12 @@ public abstract class Membro {
      * @return
      */
     public boolean associarProjeto(Projeto p){
-        //return projetos.add(p);
-        return p.associarMembro(this);
+        if(p==null){
+            return false;
+        }else{
+        p.associarMembro(this);
+        return true;
+        }
     }
     
     /**
