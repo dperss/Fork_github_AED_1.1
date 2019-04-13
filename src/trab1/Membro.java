@@ -17,9 +17,9 @@ public abstract class Membro {
     private LinkedHashSet<Projeto> projetos;
     
     /**
-     *  
-     * @param i
-     * @param n
+     *  Construtor por defeito.
+     * @param i variavel que 
+     * @param n 
      */
     public Membro(int i,String n){
         id=i;
@@ -29,8 +29,8 @@ public abstract class Membro {
     
     /**
      *
-     * @param p
-     * @return
+     * @param p chave do projeto.
+     * @return true - se for bem inserido || return false se não for bem sucedido.
      */
     public boolean associarProjeto(Projeto p){
         if(p==null){

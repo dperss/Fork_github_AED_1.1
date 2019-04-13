@@ -13,9 +13,9 @@ public class Colaborador extends Membro{
     
     /**
      *
-     * 
-     * @param i
-     * @param n
+     * Esta classe serve para invocar colaboradores.
+     * @param i chave que identifica o id.
+     * @param n chave que 
      */
     public Colaborador(int i,String n){
         super(i,n);

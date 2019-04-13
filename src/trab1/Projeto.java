@@ -30,7 +30,7 @@ public class Projeto {
     /**
      *
      * @param m
-     * @return
+     * @return true - se for bem inserido ||return false se não for bem sucedido.
      */
     public boolean associarMembro(Membro m){   
         if(m==null){

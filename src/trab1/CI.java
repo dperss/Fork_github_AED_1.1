@@ -38,7 +38,7 @@ public class CI {
      *  Esta classe serve para adicionar um Membro Integrado ao dicionario.
      * @param id a adicionar.
      * @param nome do Membro Integrado.
-     * @return true - se for bem inserido ||return false se não for bem sucedido.
+     * @return true - se for insirido com sucesso um MIntegrado || return false se não existir a chave do membro.
      */
     public boolean addMIntegrado(int id,String nome){
         if(membros.containsKey(id)==true)
@@ -53,7 +53,7 @@ public class CI {
      *  Esta classe serve para adicionar um Colaborador ao dicionario.
      * @param id a adcionar.
      * @param nome do Colaborador.
-     * @return
+     * @return true - se for insirido com sucesso um colaborador || return false se não existir a chave do membro.
      */
     public boolean addColaborador(int id,String nome){
         if(membros.containsKey(id)==true)
@@ -68,7 +68,7 @@ public class CI {
      *  Esta classe serve para associar um membro a um projetos.
      * @param idMemb a chave do membro.
      * @param idProj a chave do projeto.
-     * @return
+     * @return true - se for insirido com sucesso um membro a projeto || return false se não existir um membro ou projeto.
      */
     public boolean associarMembroAProjeto(int idMemb, int idProj){
         Membro m=membros.get(idMemb);
@@ -92,7 +92,7 @@ public class CI {
     /**
      *  Este classe serve para chamar uma função na classe projeto que vai ditribuir a verba igualmente peols Membros Integrados.
      * @param idProj a chave do projeto.
-     * @return
+     * @return 
      */
     public boolean distribuirVerbaPorMIntegrados(int idProj){
         Projeto p=projetos.get(idProj);
