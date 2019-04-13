@@ -13,16 +13,17 @@ public class MIntegrado extends Membro{
     private double saldo;
     
     /**
-     *
-     * @param i
-     * @param n
+     *  Construtor por defeito
+     *  Chama o construtor por defeito do Membro para construir a classe filho MIntegrado.
+     * @param i variavel relativa ao id.
+     * @param n variavel relativa ao nome.
      */
     public MIntegrado(int i,String n){
         super(i,n);
     }
     
     /**
-     *
+     *  Esta classe serve para adicionar o saldo ao Membro Integrado.
      * @param val é o valor a adicionar ao saldo.
      * @return true - se for adicionado com sucesso um valor ao saldo || return false se o valor a adicionar for igual a zero.
      */
@@ -35,7 +36,10 @@ public class MIntegrado extends Membro{
         return true;
         }
     }
-    
+    /**
+     * Esta classe serve para Imprimir as variaveis deste objeto.     * 
+     * @return Uma string com o id e o nome do Membro Integrado.
+     */
     @Override
     public String toString(){
         return "Id do MIntegrado: " + id + "\nNome:" + super.toString()+"\nRecebe: " + saldo + "\n";

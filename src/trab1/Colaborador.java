@@ -12,25 +12,28 @@ package trab1;
 public class Colaborador extends Membro{
     
     /**
-     *
-     * 
-     * @param i 
-     * @param n 
+     *  Construtor por defeito
+     *  Chama o construtor por defeito do Membro para construir a classe filho Colaborador.
+     * @param i variavel relativa ao id.
+     * @param n variavel relativa ao nome.
      */
     public Colaborador(int i,String n){
         super(i,n);
     }
     
     /**
-     *
+     *  
      * @param val é o valor a adicionar ao saldo.
-     * @return 
+     * @return false porque o colaborador não recebe verbas.
      */
     @Override
     public boolean addicionarAoSaldo(double val) {
         return false;
     }
-    
+    /**
+     *  Esta classe serve para Imprimir as variaveis desta objeto.
+     * @return Uma String com o id e nome do colaborador.
+     */
     @Override
     public String toString(){
         return "Id do Colaborador:" + id + "\nNome:" + super.toString()+"\n";

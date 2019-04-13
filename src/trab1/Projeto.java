@@ -28,9 +28,9 @@ public class Projeto {
     }
     
     /**
-     *
+     *  Esta classe serve para adicionar o membro ao dicionario presente no objeto projeto.
      * @param m chave do membro.
-     * @return true - se for insirido com sucesso um membro || return false se não existir a chave do membro.
+     * @return true - se o membro existir || return false se o membro não existir.
      */
     public boolean associarMembro(Membro m){   
         if(m==null){
@@ -42,6 +42,8 @@ public class Projeto {
     }
     
     /**
+     * Esta classe distribui a verba pelo Membros Integrados.Para esse objetivo vai contar a quantidade de MIntegrados existem neste projeto.
+     * Por sua vez divide essa verba e adiciona ela aos MIntegrados no 2 ciclo desta função.
      *
      */
     public void distribuirVerbaPorMIntegrado(){

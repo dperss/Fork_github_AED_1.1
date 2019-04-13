@@ -28,9 +28,9 @@ public abstract class Membro {
     }
     
     /**
-     *
+     * Esta classe serve para adicionar o projeto ao dicionario,situado dentro deste objeto.
      * @param p chave do projeto.
-     * @return true - se for insirido com sucesso um projeto || return false se não existir a chave do projeto.
+     * @return true - se for o projeto existir || return false se o projeto não existir.
      */
     public boolean associarProjeto(Projeto p){
         if(p==null){
@@ -42,7 +42,7 @@ public abstract class Membro {
     }
     
     /**
-     *
+     * Classe abstrata, a implementação encontrasse nos filhos.
      * @param val é o valor a adicionar ao saldo.
      * @return 
      */

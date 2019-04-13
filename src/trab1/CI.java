@@ -16,9 +16,9 @@ public class CI {
     private TreeMap<Integer,Membro> membros;
     
     /**
-     *Construtor por defeito.
-     *Esta classe serve para criar Centros de investigação.
-     *Cria dois dicionarios um para os projetos e outro para os membros.
+     * Construtor por defeito.
+     * Esta classe serve para criar Centros de investigação.
+     * Cria dois dicionarios um para os projetos e outro para os membros.
      */
     public CI(){
         projetos = new TreeMap<>();
@@ -68,7 +68,7 @@ public class CI {
      *  Esta classe serve para associar um membro a um projetos.
      * @param idMemb a chave do membro.
      * @param idProj a chave do projeto.
-     * @return true - se for insirido com sucesso um membro a projeto || return false se não existir um membro ou projeto.
+     * @return true - se o membro e projeto existirem || return false se não existir um membro ou projeto.
      */
     public boolean associarMembroAProjeto(int idMemb, int idProj){
         Membro m=membros.get(idMemb);
@@ -92,7 +92,7 @@ public class CI {
     /**
      *  Este classe serve para chamar uma função na classe projeto que vai ditribuir a verba igualmente peols Membros Integrados.
      * @param idProj a chave do projeto.
-     * @return true - se for distribuido com sucesso a verba por um MIntegrado || return false se não existir a chave do projeto.
+     * @return true - se o projeto existir || return false se não o projeto.
      */
     public boolean distribuirVerbaPorMIntegrados(int idProj){
         Projeto p=projetos.get(idProj);
@@ -109,7 +109,7 @@ public class CI {
     /**
      *  Esta classe serva para chamar um classe existente nos membros que imprime todo o conteudo amarzenado no dicionario.
      * 
-     * @return 
+     * @return lista de membros
      */
     public String membrosToString(){
         return membros.values().toString();
