@@ -27,8 +27,8 @@ public class CI {
     
     /**
      *  Esta classe serve para adicionar projeto aos dicionario.
-     * @param id a chave adcionar
-     * @param fin o finaciamento do projeto
+     * @param id a chave adcionar.
+     * @param fin o finaciamento do projeto.
      */
     public void addProjeto(int id,double fin){
         projetos.put(id, new Projeto(id,fin));
@@ -92,7 +92,7 @@ public class CI {
     /**
      *  Este classe serve para chamar uma função na classe projeto que vai ditribuir a verba igualmente peols Membros Integrados.
      * @param idProj a chave do projeto.
-     * @return 
+     * @return true - se for distribuido com sucesso a verba por um MIntegrado || return false se não existir a chave do projeto.
      */
     public boolean distribuirVerbaPorMIntegrados(int idProj){
         Projeto p=projetos.get(idProj);
@@ -109,13 +109,10 @@ public class CI {
     /**
      *  Esta classe serva para chamar um classe existente nos membros que imprime todo o conteudo amarzenado no dicionario.
      * 
-     * @return
+     * @return 
      */
     public String membrosToString(){
-        
-        
         return membros.values().toString();
-        
     }
 }
 

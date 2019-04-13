@@ -18,8 +18,8 @@ public class Projeto {
     
     /**
      *  Construtor por defeito.
-     * @param i
-     * @param fin
+     * @param i variavel que identifica o id.
+     * @param fin variavel que identifica o financiamento.
      */
     public Projeto(int i, double fin){
         id=i;
@@ -29,8 +29,8 @@ public class Projeto {
     
     /**
      *
-     * @param m
-     * @return true - se for bem inserido ||return false se não for bem sucedido.
+     * @param m chave do membro.
+     * @return true - se for insirido com sucesso um membro || return false se não existir a chave do membro.
      */
     public boolean associarMembro(Membro m){   
         if(m==null){
@@ -46,7 +46,6 @@ public class Projeto {
      */
     public void distribuirVerbaPorMIntegrado(){
         double num=0;
-        
         for(Membro m : membros){
            if( m instanceof MIntegrado){
                num++;

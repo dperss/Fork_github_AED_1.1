@@ -23,8 +23,8 @@ public class MIntegrado extends Membro{
     
     /**
      *
-     * @param val
-     * @return
+     * @param val é o valor a adicionar ao saldo.
+     * @return true - se for adicionado com sucesso um valor ao saldo || return false se o valor a adicionar for igual a zero.
      */
     @Override
     public boolean addicionarAoSaldo(double val) {
@@ -38,7 +38,7 @@ public class MIntegrado extends Membro{
     
     @Override
     public String toString(){
-        return "Id do MIntegrado:" + id + "\nNome:" + super.toString()+"\nRecebo:"+saldo+"\n";
+        return "Id do MIntegrado: " + id + "\nNome:" + super.toString()+"\nRecebe: " + saldo + "\n";
     }
 
 

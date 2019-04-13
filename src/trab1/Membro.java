@@ -18,8 +18,8 @@ public abstract class Membro {
     
     /**
      *  Construtor por defeito.
-     * @param i variavel que 
-     * @param n 
+     * @param i variavel que identifica o id.
+     * @param n variavel que identifica o nome.
      */
     public Membro(int i,String n){
         id=i;
@@ -30,7 +30,7 @@ public abstract class Membro {
     /**
      *
      * @param p chave do projeto.
-     * @return true - se for bem inserido || return false se não for bem sucedido.
+     * @return true - se for insirido com sucesso um projeto || return false se não existir a chave do projeto.
      */
     public boolean associarProjeto(Projeto p){
         if(p==null){
@@ -43,8 +43,8 @@ public abstract class Membro {
     
     /**
      *
-     * @param val
-     * @return
+     * @param val é o valor a adicionar ao saldo.
+     * @return 
      */
     public abstract boolean addicionarAoSaldo(double val);
     

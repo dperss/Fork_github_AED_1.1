@@ -13,9 +13,9 @@ public class Colaborador extends Membro{
     
     /**
      *
-     * Esta classe serve para invocar colaboradores.
-     * @param i chave que identifica o id.
-     * @param n chave que 
+     * 
+     * @param i 
+     * @param n 
      */
     public Colaborador(int i,String n){
         super(i,n);
@@ -23,8 +23,8 @@ public class Colaborador extends Membro{
     
     /**
      *
-     * @param val
-     * @return
+     * @param val é o valor a adicionar ao saldo.
+     * @return 
      */
     @Override
     public boolean addicionarAoSaldo(double val) {
